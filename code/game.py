@@ -1,5 +1,6 @@
 import numpy as np
 import tkinter as tk
+import sys
 
 size = input("size of the game:")
 size = int(size)
@@ -7,11 +8,12 @@ size = int(size)
 class Game:
 
     def __init__(self, master, grid=np.diag(np.ones(size))):
-        
+        # print(type(master))
         frame = tk.Frame(master)
         frame.pack()
         self.grid = grid
         self.size = size
+        self.counter = 0
         self.buttons = [[None for _ in range(size)] for _ in range(size)]
         self.map = np.random.randint(0,2,(size,size))
         
@@ -75,6 +77,9 @@ class Game:
     
     # visualisation version-0.5
     def printemoji(self):
+        if self.counter > 0:
+            for i in range(self.size):
+                sys.stdout.write("\033[F")
         for row in self.map:
             for col in row:
                 if col == 0:
@@ -82,8 +87,7 @@ class Game:
                 else:
                     print("🐭",end=" ")
             print("")
-        print("")
-
+        self.counter = self.counter + 1
 # Run GUI
 root = tk.Tk()
 root.title("Whack a mole")
