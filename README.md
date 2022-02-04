@@ -15,13 +15,15 @@ python code/game.py
 ## How to do reinforcement learning
 
 ```
-python code/run_RL.py
+cd code
+python run_RL.py
 ```
 
 ## How to train reinforcement learning
 
 ```
-python code/train_RL.py
+cd code
+python train_RL.py
 ```
 
 ## Note
