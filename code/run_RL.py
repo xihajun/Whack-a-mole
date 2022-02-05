@@ -168,7 +168,7 @@ def update_env(S, step_counter, game):
 
 
 def run():
-    # main part of RL loop
+    # main part - RL loop
     with open("data/qtable-"+str(SIZE)+".pl",'rb') as f:
         q_table = pickle.load(f)
 
@@ -210,9 +210,8 @@ if __name__ == "__main__":
     # violinplot
     ax = sns.violinplot(data=counter, color="orange", jitter=0.2, size=2.5)
     plt.title("N = "+str(SIZE), loc="left")
-    # plt.axis('off')
     plt.ylim([0,75])
     plt.savefig("img/"+str(SIZE)+".png", bbox_inches='tight')
 
-    with open("qtable.pl","wb") as f:
+    with open("data/qtable-"+str(SIZE)+".pl","wb") as f:
         pickle.dump(q_table, f)
