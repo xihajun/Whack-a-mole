@@ -9,8 +9,6 @@ import sys
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-
-
 np.random.seed(80)  # reproducible
 
 SIZE = 3 # test for size == 3
