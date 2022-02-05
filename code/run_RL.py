@@ -26,6 +26,8 @@ def indices_array(n):
     out[:,:,0] = r[:,None]
     out[:,:,1] = r
     return out
+
+# all the actions
 actions = indices_array(SIZE)+1
 
 for row in actions:
