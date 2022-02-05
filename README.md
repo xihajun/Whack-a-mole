@@ -2,7 +2,7 @@
 
 ![FullSizeRender](https://user-images.githubusercontent.com/25631641/152318428-fdd232f4-6fda-40d7-9340-ed5bab306d46.gif)
 
-The scripts for python `3.x`. Please install the requirements: `pip install -r requirements.txt`
+The scripts worked on python `3.x`. Please install the requirements: `pip install -r requirements.txt`
 
 # How to play
 
@@ -15,13 +15,15 @@ python code/game.py
 ## How to do reinforcement learning
 
 ```
-python code/run_RL.py
+cd code
+python run_RL.py
 ```
 
 ## How to train reinforcement learning
 
 ```
-python code/train_RL.py
+cd code
+python train_RL.py
 ```
 
 ## Note
